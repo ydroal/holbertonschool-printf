@@ -3,4 +3,10 @@
 
 int _printf(const char *format, ...);
 
+typedef struct print_type
+{
+	char *c;
+	void (*f)(va_list ap; int len);
+} tab_type;
+
 #endif
