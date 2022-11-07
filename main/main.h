@@ -7,8 +7,10 @@ int _printf(const char *format, ...);
 
 /**
  * struct form -  list of types of arguments
- * @c: char
+ *
+ * @c: conversion specifiers 
  * @f: function's pointer
+ *
  * Description: Longer description
  */
 typedef struct print_type
