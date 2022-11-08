@@ -42,6 +42,7 @@ int print_string(va_list ap)
 
 int print_percent(va_list ap)
 {
-	return (write(1, "%", 1));
+	(void) ap;
+	write(1, "%", 1);
 	return (1);
 }
