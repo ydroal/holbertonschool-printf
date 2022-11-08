@@ -33,6 +33,8 @@ int _printf(const char *format, ...)
 
 	va_start(ap, format);
 
+	if (format == NULL || format[i] == '\0')
+		return (-1);
 	for (i = 0; format != NULL && format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
