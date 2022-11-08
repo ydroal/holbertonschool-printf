@@ -3,12 +3,6 @@
 #include <stdarg.h>
 #include <unistd.h>
 
-int _printf(const char *format, ...);
-int _strlen(char *);
-int print_char(va_list ap);
-int print_string(va_list ap);
-int print_percent(va_list ap);
-
 /**
  * struct form -  list of types of arguments
  *
@@ -20,7 +14,13 @@ int print_percent(va_list ap);
 typedef struct print_type
 {
 	char *c;
-	void (*f)(va_list ap);
+	int (*f)(va_list ap);
 } tab_type;
+
+int _printf(const char *format, ...);
+int _strlen(char *);
+int print_char(va_list ap);
+int print_string(va_list ap);
+int print_percent(va_list ap);
 
 #endif
