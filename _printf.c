@@ -28,7 +28,7 @@ int _printf(const char *format, ...)
 		{NULL, NULL}
 	};
 	va_list ap;
-	int i, j;
+	int i = 0, j;
 	int len = 0;
 
 	va_start(ap, format);
