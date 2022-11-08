@@ -42,14 +42,13 @@ int _printf(const char *format, ...)
 				if(*spe[j].c == format[i + 1])
 				{
 					len += spe[j].f(ap);
+					i += 1;
+					break;
 				}
 			}
 		}
 		else
-		{
 			len += _putchar(format[i]);
-			i++;
-		}
 	}
 	va_end(ap);
 	return (len);

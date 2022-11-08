@@ -19,11 +19,5 @@ int print_string(va_list ap)
 
 int print_percent(va_list ap)
 {
-	char *str;
-	int len;
-	str = va_arg(ap, char*);
-	len = _strlen(str);
-	write(1, "%", 1);
-	write(1, str, len);
-	return (len + 1);
+	return (write(1, "%", 1);
 }
