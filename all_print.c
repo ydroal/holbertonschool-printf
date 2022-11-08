@@ -29,6 +29,9 @@ int print_string(va_list ap)
 	int len;
 
 	str = va_arg(ap, char*);
+	if (str == NULL)
+		str = "(null)";
+
 	len = _strlen(str);
 	return (write(1, str, len));
 }
