@@ -4,6 +4,10 @@
 #include <unistd.h>
 
 int _printf(const char *format, ...);
+int _strlen(char *);
+int print_char(va_list ap);
+int print_string(va_list ap);
+int print_percent(va_list ap);
 
 /**
  * struct form -  list of types of arguments
