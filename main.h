@@ -4,13 +4,13 @@
 #include <unistd.h>
 
 /**
- * struct form -  list of types of arguments
+ * struct print_type -  list of types of arguments
  *
- * @c: conversion specifiers 
+ * @c: conversion specifiers
  * @f: function's pointer
  *
- * Description: Longer description
  */
+
 typedef struct print_type
 {
 	char *c;
