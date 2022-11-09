@@ -25,14 +25,16 @@ int _printf(const char *format, ...)
 		{"c", print_char}, /** char *c , (*f) */
 		{"s", print_string},
 		{"%", print_percent},
+		{NULL, NULL}
 	};
 	va_list ap;
 	int i = 0, j;
 	int len = 0;
 
 	va_start(ap, format);
-
-	if (format == NULL || format[i] == '\0')
+	if (format == NULL)
+		return (-1);
+	if (format[0] == '%' && format[1] == '\0')
 		return (-1);
 	for (i = 0; format != NULL && format[i] != '\0'; i++)
 	{
@@ -40,7 +42,7 @@ int _printf(const char *format, ...)
 			len += _putchar(format[i]);
 		if (format[i] == '%')
 		{
-			for (j = 0; j < 2; j++)
+			for (j = 0; spe[j].c != NULL; j++)
 			{
 				if (*spe[j].c == format[i + 1])
 				{
@@ -49,10 +51,10 @@ int _printf(const char *format, ...)
 					break;
 				}
 			}
-		}
-		if (format[i] == '%' && format[i + 1] != '\0')
-		{
-			len += spe[2].f(ap);
+			if (spe[j].c == NULL)
+			{
+				len += _putchar(format[i]);
+			}
 		}
 	}
 	va_end(ap);
