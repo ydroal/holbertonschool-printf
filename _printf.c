@@ -25,7 +25,6 @@ int _printf(const char *format, ...)
 		{"c", print_char}, /** char *c , (*f) */
 		{"s", print_string},
 		{"%", print_percent},
-		{NULL, NULL}
 	};
 	va_list ap;
 	int i = 0, j;
@@ -37,9 +36,11 @@ int _printf(const char *format, ...)
 		return (-1);
 	for (i = 0; format != NULL && format[i] != '\0'; i++)
 	{
+		if (format[i] != '%')
+			len += _putchar(format[i]);
 		if (format[i] == '%')
 		{
-			for (j = 0; j < 4; j++)
+			for (j = 0; j < 2; j++)
 			{
 				if (*spe[j].c == format[i + 1])
 				{
@@ -49,8 +50,10 @@ int _printf(const char *format, ...)
 				}
 			}
 		}
-		else
-			len += _putchar(format[i]);
+		if (format[i] == '%' && format[i + 1] != '\0')
+		{
+			len += spe[2].f(ap);
+		}
 	}
 	va_end(ap);
 	return (len);
