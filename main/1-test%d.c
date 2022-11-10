@@ -18,7 +18,7 @@ int main(void)
 	lm -= 1024;
 
 	/*main_0.c main_1.c main_2.c*/
-	len = _printf("%d, %d, %d", 1024, -1024, 0);
+	len = _printf("%d, %d, %d", 10, -10, 0);
 	len2 = printf("%d, %d, %d", 1024, -1024, 0);
 	/*main_3.c main_4.c*/
 	/*len = _printf("%d, %d", INT_MAX, INT_MIN);
