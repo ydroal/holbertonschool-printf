@@ -9,23 +9,19 @@
 
 int print_number(va_list ap)
 {
-	unsigned int i;
 	int n;
+	int len = 0;
 
 	n = va_arg(ap, int);
 	if ( n < 0)
 	{
-		return (_putchar('-'));
-		i = n * -1;
+		len += _putchar('-');
+		n *= -1;
 	}
-	else
-		i = n;
-
-	if (i > 9)
+	while (n >= 0 && n <= 9)
 	{
-		print_number(i / 10);
-		print_number(i % 10);
+		len += _putchar((n / 10) + '0');
+		len += _putchar((n % 10) + '0');
 	}
-	else if (i < 9)
-		return (_putchar(n + '0'));    
+	return (len);
 }
