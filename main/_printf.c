@@ -8,7 +8,7 @@
  */
 int _putchar(char c)
 {
-	return(write(1, &c, 1));
+	return (write(1, &c, 1));
 }
 
 /**
@@ -28,27 +28,34 @@ int _printf(const char *format, ...)
 		{NULL, NULL}
 	};
 	va_list ap;
-	int i, j;
+	int i = 0, j;
 	int len = 0;
 
 	va_start(ap, format);
-
+	if (format == NULL)
+		return (-1);
+	if (format[0] == '%' && format[1] == '\0')
+		return (-1);
 	for (i = 0; format != NULL && format[i] != '\0'; i++)
 	{
+		if (format[i] != '%')
+			len += _putchar(format[i]);
 		if (format[i] == '%')
 		{
-			for (j = 0; j < 4; j++)
+			for (j = 0; spe[j].c != NULL; j++)
 			{
-				if(*spe[j].c == format[i + 1])
+				if (*spe[j].c == format[i + 1])
 				{
 					len += spe[j].f(ap);
 					i += 1;
 					break;
 				}
 			}
+			if (spe[j].c == NULL)
+			{
+				len += _putchar(format[i]);
+			}
 		}
-		else
-			len += _putchar(format[i]);
 	}
 	va_end(ap);
 	return (len);
