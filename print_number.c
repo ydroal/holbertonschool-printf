@@ -9,9 +9,9 @@
 
 int print_number(va_list ap)
 {
-	int n;
+	long int n;
 	int len = 0;
-	int div = 1;
+	long int div = 1;
 
 	n = va_arg(ap, int);
 	if (n < 0)
