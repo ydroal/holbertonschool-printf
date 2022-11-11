@@ -40,3 +40,6 @@ File: man_3_printf
 
 ## Repo
 * GitHub repository: holbertonschool-printf
+
+## Test
+![](https://gyazo.com/119f848a80cc5c2825a83d731897d90f) 
