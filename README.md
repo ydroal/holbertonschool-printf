@@ -1,9 +1,17 @@
-# Holberton School Printf
+# Project - C - printf
 
-This repository stores my printf projects I did at the Holberton school. 
+Re-create of the printf function.
+This is a group project.
 
 ## Requirements
-All files were compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
+* All files were compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
+* This code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
+
+## GitHub
+There should be one project repository per group.
+
+## Compilation
+$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 
 ## Projects
 * [holbertonschool-printf](https://github.com/ydroal/holbertonschool-printf) 
@@ -42,4 +50,4 @@ File: man_3_printf
 * GitHub repository: holbertonschool-printf
 
 ## Test
-![](https://gyazo.com/119f848a80cc5c2825a83d731897d90f) 
+![](https://gyazo.com/119f848a80cc5c2825a83d731897d90f.png)
