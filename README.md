@@ -51,3 +51,6 @@ File: man_3_printf
 
 ## Example
 ![Exemple](https://user-images.githubusercontent.com/113631115/201341681-adcdcd49-0242-46a6-a552-55002da285b5.png)
+
+## Flowchart
+[Fowchart.pdf](https://github.com/ydroal/holbertonschool-printf/files/9991530/Fowchart.pdf)
