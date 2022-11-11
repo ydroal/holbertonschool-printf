@@ -51,3 +51,4 @@ File: man_3_printf
 
 ## Test
 ![](https://gyazo.com/119f848a80cc5c2825a83d731897d90f.png)
+![Exemple](https://user-images.githubusercontent.com/113631115/201341681-adcdcd49-0242-46a6-a552-55002da285b5.png)
