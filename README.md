@@ -40,7 +40,6 @@ File: man_3_printf
 
 ## Repo
 * GitHub repository: holbertonschool-printf
-* 
 
 example
 root@cdb6cce18616:/holbertonschool-printf/main# cat 0-test.c
