@@ -11,7 +11,7 @@
 int _printf(const char *format, ...)
 {
 	tab_type spe[] = {
-		{"c", print_char}, /** char *c , (*f) */
+		{"c", print_char},
 		{"s", print_string},
 		{"%", print_percent},
 		{"d", print_number},
